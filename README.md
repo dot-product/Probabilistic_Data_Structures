@@ -1,4 +1,4 @@
-<h1>----------- Probabilistic_Data_Structures -------</h1>
+<h1> Probabilistic_Data_Structures </h1>
 This Repository contains implementation of below Probabilistic Data Structures.
 <ol>
 	<li> Bloom Filter</li>
