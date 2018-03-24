@@ -1,11 +1,9 @@
-# Probabilistic_Data_Structures
-
------------------------------------------ Welcome ------------------------------------
-
+<h1>----------------Probabilistic_Data_Structures--------------------</h1>
 This Repository contains implementation of below Probabilistic Data Structures.
-
-		1. Bloom Filter
-		2. Count_Min Sketch
-		3. FM Sketch
-		4. Cuckoo Filter
-		5. HyperLogLog
+<ol>
+	<li> Bloom Filter</li>
+	<li> Count_Min Sketch </li>
+	<li> FM Sketch</li>
+	<li> Cuckoo Filter</li>
+	<li> HyperLogLog</li>
+</ol>
