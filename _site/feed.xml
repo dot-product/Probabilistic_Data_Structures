@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-06-07T00:14:40+05:30</updated><id>http://localhost:4000/</id><title type="html">WonderLand..</title><subtitle>Every day is full of wonders, lets list them!!</subtitle><entry><title type="html">LSH</title><link href="http://localhost:4000/myresearchwork/2018/04/07/LSH.html" rel="alternate" type="text/html" title="LSH " /><published>2018-04-07T10:04:36+05:30</published><updated>2018-04-07T10:04:36+05:30</updated><id>http://localhost:4000/myresearchwork/2018/04/07/LSH</id><content type="html" xml:base="http://localhost:4000/myresearchwork/2018/04/07/LSH.html"></content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Hash Functions Quality</title><link href="http://localhost:4000/probabilistic_data_structures/2018/04/06/HashFunctions.html" rel="alternate" type="text/html" title="Hash Functions Quality " /><published>2018-04-06T10:04:36+05:30</published><updated>2018-04-06T10:04:36+05:30</updated><id>http://localhost:4000/probabilistic_data_structures/2018/04/06/HashFunctions</id><content type="html" xml:base="http://localhost:4000/probabilistic_data_structures/2018/04/06/HashFunctions.html">&lt;!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated. --&gt;
+&lt;!-- 
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+
+[jekyll-docs]: https://jekyllrb.com/docs/home
+[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-talk]: https://talk.jekyllrb.com/ --&gt;
+&lt;p&gt;Hash functions are magic blocks in solutions for many computational problems. They are used in crypthography, probabilistic data structures(PDS), searching,on average O(1) search capability and many other problems. Different types of problems demand or expect defferent type of qualities from hashfunctions. For example, cryptographic hashfunctions should give different hash values for two different items but hash fucntions used in searching problem are expected to produce same hash values for similar items with high probability. In this article we are interested in non cryptographic hash functions, also known as general purpose hash functions.&lt;/p&gt;
+
+&lt;p&gt;Ok, what is hash function?.Any funciton that can be used to map data elements of arbitrary size to data elemnts of fixed size(wiki). Usually hash functions have  some or all below mentioned characteristics,&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Determinism&lt;/strong&gt; :  &lt;br /&gt;
+A hash procedure must be deterministic - meaning that for a given input value it must always generate the same hash value.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Uniformity&lt;/strong&gt; : &lt;br /&gt;
+A good hash function should map the expected inputs as evenly as possible over its output range. That is, every hash value in the output range should be generated with roughly the same probability.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Defined Range:&lt;/strong&gt; &lt;br /&gt;
+It is desirable that output of a hash function have fixed size. For example, SHA-1, one of the most widely used cryptographic hash functions produces a 160-bit value.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Data Normalization:&lt;/strong&gt; &lt;br /&gt;
+In some applications, the input data may contain features that are irrelevant for comparison purpose. For example, when looking up a personal name, it may be desirable to ignore the distinction between upper and lower case letters.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Continuity:&lt;/strong&gt;&lt;br /&gt;
+A hash function that is used to search for similar data must be as coninuous as possible; two inputs that differ by a little should be mapped to equal or nearly equal hash values.&lt;br /&gt;&lt;br /&gt;Note that continutiy is usally considered a fatal flaw for &lt;em&gt;checksums, cryptographic hash functions,&lt;/em&gt; and other related concepts.Continutiy is desirable for hash functions only in some applicaitons, such as hash tables used in &lt;em&gt;Nearest neighbor Search&lt;/em&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Non-invertible:&lt;/strong&gt;&lt;br /&gt;
+In cryptographic applications, hash functions are typically expected to be practically non-invertible, 
+meaning that it is not realistic to reconstruct the input datum x from its hash value h(x) alone without spending great
+amount of time.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;In this post we are going to analyze few hash functions with respect to the following parameters.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* uniformity.
+* speed of hash functions- Time taken to compute the hash value.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Uniformity of a hash function can be tested using chi square test. we will explain how to use this test to know the uniformity of a hash function. One main reason to consider the uniformity is many PDS assume that hash functions are uniform. since we are more interested in PDS we consider uniformity.So, We analyse the performance of below hash functions with respect to uniformity and speed.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. Murmur Hashes
+2. Crypthographic hash functions like SHA-256
+3. Kirsch-Mitzenmacher-Optimization to only compute 2 instead of k hash functions 
+4. MD5
+5. SHA1
+6. CRC32
+7. Jenkins Hash
+8. one at a time hash
+9. FNV Hash
+10. City Hash
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
