@@ -24,7 +24,7 @@ twitter_username: venky_timmu
 github_username:  dot-product
 
 # Build settings
-markdown: kramdown
+# markdown: kramdown
 theme: minima
 # theme: slate
 plugins:
